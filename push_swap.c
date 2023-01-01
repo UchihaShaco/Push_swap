@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:20:25 by jalwahei          #+#    #+#             */
-/*   Updated: 2022/12/25 18:30:02 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/01 18:43:05 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,8 @@ t_stack	*fill_stack(int ac, char **av)
 
 int	main(int ac, char **av)
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (ac < 2)
 	{
@@ -138,8 +138,7 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	stack_b = NULL;
-	stack_a = fill_stack(ac,av);
-
+	stack_a = fill_stack(ac, av);
+	push_sort(&stack_a, &stack_b);
 	return (0);
 }
-
