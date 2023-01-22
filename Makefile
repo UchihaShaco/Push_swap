@@ -5,37 +5,41 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/12 18:47:01 by jalwahei          #+#    #+#              #
-#    Updated: 2023/01/01 22:46:47 by jalwahei         ###   ########.fr        #
+#    Created: 2022/12/15 06:11:31 by jalwahei          #+#    #+#              #
+#    Updated: 2023/01/22 14:55:45 by jalwahei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=push_swap
-SRCS=push_swap.c \
-	stack_add.c \
-	rotate.c \
-	swap_moves.c \
-	pa_pb.c \
-	push_utils.c \
-	
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -g 
+INCLUDES = -I ./ -I libft
+NAME = push_swap
+HEADER = push_swap.h
+LIBFT = libft
+LIBFT_LIB = libft.a
+SRCS = utils/error.c swap_rules/swap.c swap_rules/push.c\
+	   swap_rules/rotate.c swap_rules/reverse_rotate.c\
+	   sort/sorting.c sort/two_four_args.c sort/three_args.c sort/five_args.c\
+	   sort/set_chunk_pivot.c sort/sort_chunk.c utils/utils.c\
+	   stack/set_stack.c stack/push_pop.c\
+	   main.c
+OBJS = $(SRCS:.c=.o)
 
-OBJS=$(SRCS:.c=.o)
-CC=cc
-CFLAGS= -Werror -Wall -Wextra
-HEADER=push_swap.h 
+all : $(NAME)
 
-all: $(NAME)
+$(NAME) : $(OBJS)
+	make -C $(LIBFT)
+	$(CC) $(CFLAGS) -L$(LIBFT) -lft $^ -o $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+%.o : %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-%.o: %.c $(HEADER)
-	$(CC) -c $(CFLAGS) $< -o $@
+clean :
+	make clean -C $(LIBFT)
+	$(RM) $(OBJS)
 
-clean:
-	rm -rf $(OBJS)
+fclean : clean
+	make fclean -C $(LIBFT)
+	$(RM) $(NAME)
 
-fclean: clean
-	rm -rf $(NAME)
-
-re: fclean all
+re : fclean all
