@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 11:48:30 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/18 14:03:04 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/30 14:08:36 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 t_stack	*init_stack(void)
 {
@@ -24,8 +24,7 @@ t_stack	*init_stack(void)
 	return (stack);
 }
 
-t_node	*
-create_node(int data)
+t_node	*create_node(int data)
 {
 	t_node	*new_node;
 
@@ -49,4 +48,23 @@ t_stack	*put_element(t_stack *stack, int size, int *temp)
 		i++;
 	}
 	return (stack);
+}
+
+int	check_spaces_only(char *str)
+{
+	int	i;
+	int	spaces_only;
+
+	i = 0;
+	spaces_only = 1;
+	while (str[i])
+	{
+		if (str[i] != ' ')
+		{
+			spaces_only = 0;
+			break ;
+		}
+		i++;
+	}
+	return (spaces_only);
 }

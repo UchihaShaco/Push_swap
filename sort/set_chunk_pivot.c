@@ -6,11 +6,25 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 12:33:57 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/22 13:40:54 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/02/01 18:21:41 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
+
+// static	int	find_sqrt(int x)
+// {
+// 	int		approximation;
+// 	double	precision;
+
+// 	approximation = x;
+// 	precision = 0.5;
+// 	while (abs(approximation * approximation - x) > precision)
+// 	{
+// 		approximation = (approximation + (x / approximation)) / 2;
+// 	}
+// 	return (approximation);
+// }
 
 int	set_chunk_num(int size)
 {

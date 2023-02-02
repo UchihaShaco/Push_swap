@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 04:34:49 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/17 15:16:27 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/22 15:19:45 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 int	check_valid_num(char *element)
 {

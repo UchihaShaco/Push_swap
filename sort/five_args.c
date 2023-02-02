@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 19:33:57 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/10 09:19:46 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/22 15:19:00 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 static void	add_in_four(t_stack *a, t_stack *b)
 {

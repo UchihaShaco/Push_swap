@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 06:17:13 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/16 15:51:19 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/22 15:19:39 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 void	do_ra(t_stack *a)
 {

@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:00:31 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/22 13:58:22 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:52:04 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 long long	ft_atoi_ll(const char *str)
 {
@@ -29,6 +29,10 @@ long long	ft_atoi_ll(const char *str)
 	{
 		result = (result * 10) + (str[i] - '0');
 		i++;
+	}
+	if (str[--i] == '+' || str[i] == '-')
+	{
+		return (3000000000);
 	}
 	return ((long long)result * sign);
 }

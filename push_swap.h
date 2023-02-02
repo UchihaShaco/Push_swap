@@ -6,7 +6,7 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 04:10:04 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/22 14:55:49 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/27 19:15:01 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ long long	ft_atoi_ll(const char *str);
 int			count_element(char **element);
 char		*ft_merge(char *s1, char *s2);
 void		free_args(char **argv);
+int			check_spaces_only(char *str);
 
 t_node		*create_node(int data);
 t_stack		*put_element(t_stack *stack, int size, int *temp);

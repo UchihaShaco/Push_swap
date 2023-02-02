@@ -6,11 +6,11 @@
 /*   By: jalwahei <jalwahei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 17:33:57 by jalwahei          #+#    #+#             */
-/*   Updated: 2023/01/10 05:35:25 by jalwahei         ###   ########.fr       */
+/*   Updated: 2023/01/24 19:51:45 by jalwahei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap.h"
 
 int	is_sorted(t_stack *a, t_stack *b)
 {
@@ -45,5 +45,4 @@ void	sorting(t_stack *a, t_stack *b, int *arr)
 		sort_one_chunk(a, b);
 	else
 		sort_chunks(a, b, arr);
-	free(arr);
 }
